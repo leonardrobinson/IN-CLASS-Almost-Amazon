@@ -8,11 +8,13 @@ const navigationEvents = () => {
 
   // TODO: BOOKS ON SALE
   document.querySelector('#sale-books').addEventListener('click', () => {
+    booksOnSale().then(showBooks);
     console.warn('CLICKED SALE BOOKS');
   });
 
-  // TODO: ALL BOOKS
+  // TODO: ALL BOOKS updated the books event listener
   document.querySelector('#all-books').addEventListener('click', () => {
+    getBooks().then(showBooks);
     console.warn('CLICKED ALL BOOKS');
   });
 
